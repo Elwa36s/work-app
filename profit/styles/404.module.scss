@@ -1,0 +1,18 @@
+@use 'utils';
+
+.content {
+    @extend %flex-column-center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--error-page-bg);
+
+    h1 {
+        color: #b73535;
+        margin: 40px 0 40px;
+    }
+
+    h3 {
+        color: var(--dark-grey);
+    }
+}
