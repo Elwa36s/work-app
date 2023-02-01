@@ -1,0 +1,7 @@
+@use '../../../styles/utils';
+
+.day {
+    @extend %flex-column;
+    padding: 5px 10px;
+    flex-grow: 1;
+}
