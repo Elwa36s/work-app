@@ -1,8 +1,18 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
+import {getMonthWeeksStarts} from '@app/utils';
+import {Day} from '@components/Schedule/Day';
 
-export const View: FC = () => {
+interface MonthProps {
+    dayOfMonth: Date;
+}
+
+export const View: FC<MonthProps> = (props) => {
+    const {dayOfMonth} = props;
+    const weeksDays = useMemo(() => getMonthWeeksStarts(dayOfMonth), [dayOfMonth]);
+    const renderMonth = (weeksDays: Date[]) => weeksDays.map((day) => (<Week key={day.getMilliseconds()} date={day}/>));
     
     return (
-        <div></div>
+        <div>{renderMonth(weeksDays)}</div>
     );
 };
+
