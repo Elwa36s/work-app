@@ -1,7 +1,51 @@
 @use 'styles/utils';
+$day-border: 1px solid var(--border-color);
+
 
 .day {
     @extend %flex-column;
     padding: 5px 10px;
     flex-grow: 1;
+
+    .day_title {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .day_order_list {
+        border: $day-border;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        padding: 5px;
+        overflow: auto;
+        & > * {
+            height: 30px;
+            border-bottom: $day-border;
+        }
+    }
+
+    .day_add_order_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background-color: unset;
+        border-radius: 0 0 5px 5px;
+        border: $day-border;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: var(--dark-gray);
+
+        &:hover {
+            cursor: pointer;
+            font-size: 16px;
+            text-shadow: 0 0 1px var(--text);
+            background-color: #cacaca34;
+            transition: all 2s;
+        }
+    }
 }

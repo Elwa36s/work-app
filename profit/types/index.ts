@@ -1,9 +1,12 @@
 export interface OrderInfo {
+    id: string | number;
     begin: string;
     end: string;
-    orderName: string;
+    order_name: string;
     customer?: string;
-    customerContact?: string;
+    customer_contact?: string;
     profit?: number;
     costs?: number;
 }
+
+export type DayOrders = OrderInfo[];

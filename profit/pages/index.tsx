@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <PageLayout title="Home">
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', flexWrap: 'wrap', height: '100vh'}}>
           <Week dayOfWeek={getStartOfWeek(today, previewWeek)} />
       </div>
     </PageLayout>
