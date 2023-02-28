@@ -8,7 +8,7 @@ interface OrderProps {
 
 export const View: FC<OrderProps> = (props) => {
     const {orderInfo} = props;
-    const {begin, end, order_name} = orderInfo;
+    const {begin, end, order_name, customer} = orderInfo;
 
     return (
         <div className={styles.order}>
@@ -16,6 +16,14 @@ export const View: FC<OrderProps> = (props) => {
                 <div>{begin}</div>
                 <hr/>
                 <div>{end}</div>
+            </div>
+            <div className={styles.order_info}>
+                <div className={styles.order_name}>
+                    {order_name}
+                </div>
+                <div className={styles.order_customer}>
+                    for {customer}
+                </div>
             </div>
 
         </div>

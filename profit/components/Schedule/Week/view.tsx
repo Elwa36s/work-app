@@ -15,19 +15,22 @@ export const View: FC<WeekProps> = (props) => {
             id: '1',
             begin: '10:30',
             end: '11:30',
-            orderName: 'Test1',
+            order_name: 'Order 1',
+            customer: 'Andrew',
         },
         {
             id: '2',
             begin: '11:45',
             end: '13:30',
-            orderName: 'Test2',
+            order_name: 'Order 2',
+            customer: 'Ben',
         },
         {
             id: '3',
             begin: '14:00',
             end: '16:15',
-            orderName: 'Test3',
+            order_name: 'Order 3',
+            customer: 'Carl',
         },
     ];
 

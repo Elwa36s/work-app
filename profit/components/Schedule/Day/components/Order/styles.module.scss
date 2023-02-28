@@ -1,16 +1,34 @@
+@use 'styles/utils';
+
 .order {
     display: flex;
     align-items: center;
     padding: 5px;
     
     .order_time {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         align-items: center;
-        font-size: 12px;
+        font-size: 10px;
+        flex-grow: 1;
 
         hr {
-            width: 100%;
+            width: 50%;
+        }
+    }
+
+    .order_info {
+        @extend %flex-column;
+        flex-grow: 4;
+        padding: 0 10px;
+        justify-content: center;
+
+        .order_name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .order_customer{
+            font-size: 12px;
         }
     }
 }
