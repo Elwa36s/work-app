@@ -16,6 +16,7 @@ $day-border: 1px solid var(--border-color);
         @extend %flex-column;
         border: $day-border;
         border-bottom: none;
+        border-radius: 5px 5px 0 0;
         justify-content: space-evenly;
         flex-grow: 1;
         padding: 5px;

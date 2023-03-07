@@ -1,0 +1,42 @@
+.month {
+    .month_title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    
+    .month_grid, .month_week-legend {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-items: center;
+        text-transform: uppercase;
+        font-size: 15px;
+
+        & > div {
+            padding: 5px;
+        }
+
+        .month_day {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: all 0.5s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #61616141;
+                border: 1px solid var(--text);
+
+            }
+        }
+    }
+
+    .month_week-legend {
+        color: var(--dark-gray);
+    }
+}

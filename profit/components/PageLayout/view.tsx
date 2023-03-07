@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import Head from 'next/head';
+import {Header} from '@components/Header';
 
 interface PageLayoutProps {
     title: string;
@@ -19,6 +20,7 @@ export const View: FC<PageLayoutProps> = (props) => {
             <meta charSet="utf-8" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
+          <Header />
           <main>
             {children}
           </main>
