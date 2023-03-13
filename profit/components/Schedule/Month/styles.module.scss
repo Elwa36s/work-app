@@ -29,10 +29,14 @@
 
             &:hover {
                 cursor: pointer;
-                background-color: #61616141;
+                background-color: var(--dark-grey-transparent);
                 border: 1px solid var(--text);
 
             }
+        }
+
+        .current_day {
+            border: 1px dashed var(--text);
         }
     }
 
