@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 interface DayProps {
     date: Date;
-    dayOrders: DayOrders;
+    dayOrders?: DayOrders;
 }
 
 export const View: FC<DayProps> = (props) => {
@@ -20,7 +20,7 @@ export const View: FC<DayProps> = (props) => {
             <h4 className={styles.day_title}>{getDayTitle(date)}</h4>
             <ul className={styles.day_order_list}>
                 {
-                    dayOrders.map((order) => <Order key={order.id} orderInfo={order} />)
+                    dayOrders && dayOrders.map((order) => <Order key={order.id} orderInfo={order} />)
                 }
             </ul>
             <button className={styles.day_add_order_button}>
